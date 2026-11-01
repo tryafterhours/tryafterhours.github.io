@@ -1,0 +1,458 @@
+<!doctype html>
+<html lang="en-IN">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://cdn.jsdelivr.net 'sha256-+S5cjrE2kA9WKYoBqOcm8PSjn1mZpTjpO5Uc7USBpj0='; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; font-src 'self'; connect-src 'self' https://txncchkalmkvjaeogduh.supabase.co https://cdn.jsdelivr.net; worker-src 'self' blob:; object-src 'none'; base-uri 'self'; form-action 'none'; upgrade-insecure-requests">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta name="description" content="For the person you keep noticing at work. A private dating app for working professionals in India. Nobody finds out unless it's mutual.">
+<link rel="canonical" href="https://tryafterhours.app/">
+<meta property="og:type" content="website"><meta property="og:site_name" content="afterhours"><meta property="og:url" content="https://tryafterhours.app/">
+<meta property="og:title" content="afterhours | The app you ain't supposed to talk about."><meta property="og:description" content="For the person you keep noticing at work. A private dating app for working professionals in India. Nobody finds out unless it's mutual.">
+<meta property="og:image" content="https://tryafterhours.app/assets/og-card.jpg"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="afterhours: The app you ain't supposed to talk about.">
+<meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="afterhours"><meta name="twitter:description" content="For the person you keep noticing at work. A private dating app for working professionals in India. Nobody finds out unless it's mutual."><meta name="twitter:image" content="https://tryafterhours.app/assets/og-card.jpg">
+<script type="application/ld+json">[{"@context": "https://schema.org", "@type": "Organization", "name": "afterhours", "url": "https://tryafterhours.app/", "logo": "https://tryafterhours.app/assets/apple-touch-icon.png", "email": "support@tryafterhours.app", "areaServed": "IN", "description": "For the person you keep noticing at work. A private dating app for working professionals in India. Nobody finds out unless it's mutual."}, {"@context": "https://schema.org", "@type": "WebSite", "name": "afterhours", "url": "https://tryafterhours.app/", "inLanguage": "en-IN"}, {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Is it really anonymous?", "acceptedAnswer": {"@type": "Answer", "text": "Until it's mutual, yes. Nobody learns you Sparked them unless they Spark you too. We can't stop people guessing, but we never give it away."}}, {"@type": "Question", "name": "What if my manager is on it?", "acceptedAnswer": {"@type": "Answer", "text": "They might be. But nobody can browse, so they'd never see you unless you both Spark each other. And there's one promise every member makes: no Sparks up or down your reporting line. Managers and their teams are off-limits, both ways."}}, {"@type": "Question", "name": "Why LinkedIn?", "acceptedAnswer": {"@type": "Answer", "text": "To keep it real. Only verified professionals get in, and we check the workplace badge by hand. We never post anything."}}, {"@type": "Question", "name": "Is it free?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Joining and using afterhours is free."}}, {"@type": "Question", "name": "When does it open?", "acceptedAnswer": {"@type": "Answer", "text": "Very soon, starting with Bengaluru's tech parks. Join the waitlist and we'll email you the moment we open near you."}}]}]</script>
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>afterhours | Office & tech park dating for professionals in India</title>
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="icon" href="assets/favicon-96.png" sizes="96x96" type="image/png">
+<link rel="icon" href="assets/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<meta name="theme-color" content="#3B2416">
+<style>
+@font-face{font-family:AHSerif;src:url(fonts/InstrumentSerif-Regular.ttf)}
+@font-face{font-family:AHSerif;font-style:italic;src:url(fonts/InstrumentSerif-Italic.ttf)}
+@font-face{font-family:AHSans;src:url(fonts/Inter.ttf)}
+:root{
+  --paper:#F6EFE3;--ink:#2B1E12;--ink2:#6f5c4b;--primary:#3B2416;--onP:#FBF3E6;--spark:#E9A93B;
+  --night:#16111b;
+  --sky1:#f0c584;--sky2:#f5ddb4;--sky3:#f7ecdc;--dark:0;
+  --text:#2B1E12;--text2:#6f5c4b;
+}
+*{box-sizing:border-box;margin:0}
+html{background:var(--night)}
+body{font-family:AHSans,system-ui,sans-serif;color:var(--text);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+.serif{font-family:AHSerif,serif;font-weight:400;letter-spacing:-.015em;line-height:1.02}
+i{font-style:italic}
+
+/* ---------- header ---------- */
+#top{position:fixed;inset:0 0 auto 0;z-index:30;display:flex;justify-content:space-between;align-items:center;padding:calc(14px + env(safe-area-inset-top)) 18px 0;pointer-events:none}
+#brand{display:flex;align-items:center;gap:8px;font-family:AHSerif;font-size:21px;letter-spacing:-.01em;color:var(--text);transition:color .8s}
+#brand svg{width:20px;height:20px}
+#clock{font:500 11.5px AHSans;letter-spacing:.06em;color:var(--text2);transition:color .8s;font-variant-numeric:tabular-nums}
+.pillbtn{pointer-events:auto;display:inline-flex;align-items:center;gap:6px;font:500 12.5px AHSans;padding:9px 14px 9px 16px;border-radius:99px;
+  background:rgba(255,255,255,.55);color:var(--ink);text-decoration:none;border:1px solid rgba(43,30,18,.08);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);transition:all .8s}
+.night .pillbtn{background:rgba(255,255,255,.08);color:#f6ecdd;border-color:rgba(255,255,255,.12)}
+.night #brand{color:#f6ecdd}.night #clock{color:#bba996}
+.right{display:flex;gap:14px;align-items:center}
+
+/* ---------- stage ---------- */
+#story{position:relative;height:1100vh}
+#stage{position:sticky;top:0;height:100vh;height:100lvh;overflow:hidden;background:linear-gradient(180deg,var(--sky1),var(--sky2) 52%,var(--sky3))}
+#nightsky{position:absolute;inset:0;opacity:var(--dark);background:radial-gradient(130% 70% at 50% 100%,#3b2733 0%,#241a27 45%,var(--night) 100%)}
+#stars{position:absolute;inset:0 0 40% 0;opacity:calc(var(--dark) * .85)}
+#stars i{position:absolute;width:1.6px;height:1.6px;border-radius:50%;background:#fff4dc}
+#paper{position:absolute;inset:0;pointer-events:none;z-index:25;opacity:.32;
+  background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='220' height='220'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 .32 0 0 0 0 .24 0 0 0 0 .16 0 0 0 .22 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>")}
+.night #paper{opacity:.12}
+
+/* scene zone: lower part of the screen, never under the text */
+#scene{position:absolute;left:0;right:0;bottom:0;height:58%;transform-origin:50% 55%;will-change:transform}
+#scene canvas{width:100%!important;height:100%!important;display:block}
+#bokeh{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:2;mix-blend-mode:screen}
+#polas{position:absolute;left:0;right:0;pointer-events:none;z-index:3}
+.pola{position:absolute;margin:0;width:clamp(86px,22vw,150px);padding:6px 6px 0;background:#fbf6ec;border-radius:3px;
+ box-shadow:0 18px 30px -14px rgba(40,20,10,.55),0 2px 6px rgba(40,20,10,.18);transform:rotate(var(--r)) translateY(var(--y,0px));opacity:0;will-change:transform,opacity}
+.pola img{display:block;width:100%;aspect-ratio:1;object-fit:cover;filter:sepia(.18) saturate(.9) contrast(.96)}
+.pola figcaption{font-family:AHSerif;font-style:italic;font-size:clamp(11px,2.9vw,15px);color:#4a3626;text-align:center;padding:5px 2px 7px;white-space:nowrap}
+.pola:nth-child(1){left:5%;top:0}.pola:nth-child(2){right:5%;top:18%}.pola:nth-child(3){left:12%;top:46%}
+
+/* text zone: upper part, centred */
+.panel{position:absolute;left:50%;top:calc(74px + env(safe-area-inset-top));width:min(88vw,620px);transform:translateX(-50%);text-align:center;opacity:0;pointer-events:none}
+.panel.on{pointer-events:auto}
+.k{font:500 10.5px AHSans;letter-spacing:.22em;text-transform:uppercase;color:var(--text2);margin-bottom:14px}
+.panel h1{font-size:clamp(36px,9.6vw,64px)}
+.panel h2{font-size:clamp(32px,8.6vw,54px)}
+.panel p{font-size:15px;line-height:1.55;color:var(--text2);max-width:30em;margin:12px auto 0}
+.panel p b{color:var(--text);font-weight:500}
+.cta{display:inline-flex;align-items:center;gap:8px;margin-top:22px;font:500 14px AHSans;padding:13px 20px 13px 22px;border-radius:99px;background:var(--primary);color:var(--onP);text-decoration:none;border:0;cursor:pointer;transition:transform .3s cubic-bezier(.16,1,.3,1)}
+.cta:active{transform:scale(.97)}
+.cta svg{width:13px;height:13px}
+.fine{font-size:11.5px;color:var(--text2);margin-top:12px;letter-spacing:.02em}
+.night{--text:#f6ecdd;--text2:#c2af9b}
+#hint{margin-top:14px;font:500 10px AHSans;letter-spacing:.24em;text-transform:uppercase;color:var(--text2)}
+
+.promises{list-style:none;padding:0;margin:18px auto 0;display:grid;gap:9px;text-align:left;max-width:360px}
+.promises li{display:grid;grid-template-columns:18px 1fr;font-size:14px;line-height:1.45;color:#d9c8b4;opacity:0}
+.promises li b{color:#fbf2e4;font-weight:500}
+.promises li::before{content:"";width:6px;height:6px;margin-top:7px;border-radius:50%;background:var(--spark);box-shadow:0 0 8px var(--spark)}
+
+/* tech-park ticker */
+.ticker{margin:22px -50vw 0;overflow:hidden;white-space:nowrap;mask-image:linear-gradient(90deg,transparent,#000 18%,#000 82%,transparent)}
+#tick{display:inline-block;font-family:AHSerif;font-size:clamp(24px,6.4vw,40px);color:#f6ecdd;letter-spacing:-.01em;will-change:transform}
+#tick i{font-style:normal;color:var(--spark);margin:0 .5em}
+/* chat */
+#chat{position:absolute;left:50%;bottom:16%;width:min(80vw,330px);transform:translateX(-50%);display:grid;gap:8px;opacity:0;z-index:6}
+.bub{max-width:82%;padding:10px 14px;border-radius:18px;font-size:14px;line-height:1.38}
+.bub.them{background:#fbf3e6;color:var(--ink);border-bottom-left-radius:5px}
+.bub.me{justify-self:end;background:var(--primary);color:var(--onP);border-bottom-right-radius:5px}
+.timer{justify-self:center;font:500 11.5px AHSans;letter-spacing:.04em;color:#f6ecdd;padding:6px 12px;border-radius:99px;border:1px solid rgba(255,255,255,.18);background:rgba(20,14,20,.4);backdrop-filter:blur(8px);margin-bottom:4px;font-variant-numeric:tabular-nums}
+
+/* ---------- the after-hours pass (waitlist) ---------- */
+#passwrap{position:absolute;left:50%;top:calc(150px + env(safe-area-inset-top));transform:translateX(-50%);width:min(86vw,350px);z-index:8;opacity:0;pointer-events:none}
+#passwrap.on{pointer-events:auto}
+.lanyard{display:block;margin:0 auto -6px;width:64px;height:56px}
+.pass{position:relative;border-radius:18px;background:#fbf4e8;color:var(--ink);box-shadow:0 30px 60px -30px rgba(0,0,0,.7),0 1px 0 rgba(255,255,255,.6) inset;overflow:hidden;text-align:left}
+.pass::before{content:"";position:absolute;inset:0;opacity:.55;mix-blend-mode:multiply;background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2'/><feColorMatrix values='0 0 0 0 .4 0 0 0 0 .3 0 0 0 0 .2 0 0 0 .16 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");pointer-events:none}
+.pass .band{display:flex;justify-content:space-between;align-items:center;padding:13px 18px;background:var(--primary);color:var(--onP);font:500 10px AHSans;letter-spacing:.2em;text-transform:uppercase}
+.pass .band b{font-family:AHSerif;font-weight:400;font-size:17px;letter-spacing:-.01em;text-transform:none}
+.slot{position:absolute;top:8px;left:50%;width:44px;height:7px;margin-left:-22px;border-radius:4px;background:var(--night);opacity:.9}
+.pass .body{padding:18px 18px 16px;display:grid;gap:12px;position:relative}
+.row{display:grid;gap:4px}
+.row label{font:500 9.5px AHSans;letter-spacing:.2em;text-transform:uppercase;color:#9a8470}
+.row input{border:0;border-bottom:1px solid #d9cab6;background:transparent;font:16px AHSans;color:var(--ink);padding:6px 0 7px;outline:none;width:100%;border-radius:0}
+.row input:focus{border-bottom-color:var(--primary)}
+.row input::placeholder{color:#b7a693}
+.note{display:flex;gap:7px;font-size:11.5px;line-height:1.45;color:#7d6855;margin-top:2px}
+.note svg{flex:0 0 12px;height:12px;margin-top:2px}
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+.chips label{font:13px AHSans;letter-spacing:0;text-transform:none;color:var(--ink);padding:7px 11px;border-radius:99px;border:1px solid #d9cab6;cursor:pointer}
+.chips label{position:relative}
+.chips input{position:absolute;inset:0;width:100%;height:100%;margin:0;opacity:0;pointer-events:none}
+html,body{overflow-x:clip}
+.chips label:has(input:checked){background:var(--primary);border-color:var(--primary);color:var(--onP)}
+.agree{display:flex;gap:9px;align-items:flex-start;font-size:12px;line-height:1.4;color:#6f5c4b}
+.agree input{accent-color:var(--primary);width:16px;height:16px;margin-top:1px}
+.pass .foot{display:flex;justify-content:space-between;align-items:center;padding:12px 18px 16px;border-top:1px dashed #d9cab6}
+.barcode{height:22px;width:110px;background:repeating-linear-gradient(90deg,#2b1e12 0 1px,transparent 1px 3px,#2b1e12 3px 5px,transparent 5px 6px,#2b1e12 6px 7px,transparent 7px 10px);opacity:.75}
+.pass .cta{margin:0;padding:11px 16px 11px 18px;font-size:13px}
+.stamp{position:absolute;right:16px;top:64px;width:132px;height:132px;border-radius:50%;border:2.5px solid #b5651d;color:#b5651d;display:grid;place-items:center;text-align:center;
+  font:600 11px AHSans;letter-spacing:.18em;text-transform:uppercase;transform:rotate(-14deg) scale(1.6);opacity:0;mix-blend-mode:multiply;pointer-events:none}
+.stamp b{display:block;font-family:AHSerif;font-weight:400;font-style:italic;font-size:30px;letter-spacing:0;text-transform:none;margin:2px 0}
+.joined .stamp{animation:stamp .55s cubic-bezier(.2,1.4,.4,1) forwards}
+/* glued to the bottom of the stamp */
+.stamp small{display:block;font-size:8.5px;letter-spacing:.16em;line-height:1.35}
+/* share prompt right after joining */
+#sharepop{position:fixed;inset:0;z-index:120;display:grid;place-items:center;padding:18px;background:rgba(14,10,18,.55);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px)}
+#sharepop[hidden]{display:none}
+#sharepop .card{position:relative;width:min(380px,100%);background:#fffaf3;color:#2b1e12;border-radius:24px;padding:28px 22px 20px;text-align:center;box-shadow:0 24px 60px rgba(0,0,0,.35);animation:popin .45s cubic-bezier(.2,1.3,.4,1)}
+@keyframes popin{from{opacity:0;transform:translateY(18px) scale(.96)}}
+#sharepop .emo{font-size:40px;line-height:1;margin-bottom:10px}
+#sharepop h4{font-family:AHSerif;font-weight:400;font-size:28px;line-height:1.08;letter-spacing:-.01em;margin:0 0 8px}
+#sharepop p{font-size:14.5px;line-height:1.5;color:#6b5646;margin:0 0 18px}
+#sharepop .sbtn{display:flex;align-items:center;justify-content:center;gap:8px;width:100%;border:0;border-radius:999px;padding:14px 18px;font:600 15px AHSans;cursor:pointer;text-decoration:none}
+#sharepop .sbtn.main{background:#2b1e12;color:#fffaf3}
+#sharepop .row2{display:flex;gap:10px;margin-top:10px}
+#sharepop .row2 .sbtn{background:#f1e4d3;color:#2b1e12;font-size:14px;padding:12px 10px}
+#sharepop .later{margin-top:14px;background:none;border:0;color:#8a7461;font:500 13px AHSans;cursor:pointer;text-decoration:underline;text-underline-offset:3px}
+#sharepop .x{position:absolute;right:10px;top:8px;width:36px;height:36px;border:0;background:none;font-size:24px;color:#8a7461;cursor:pointer}
+@keyframes stamp{to{opacity:.88;transform:rotate(-14deg) scale(1)}}
+#after-join{display:none;text-align:center;margin-top:16px;color:#d9c8b4;font-size:14px;line-height:1.5}
+.joined #after-join,#passfit:has(.joined) #after-join{display:block}
+
+/* ---------- after the story ---------- */
+#faq{background:var(--night);color:#d9c8b4;padding:90px 22px 50px}
+#faq .inner{max-width:640px;margin:0 auto}
+#faq h3{font-family:AHSerif;font-weight:400;font-size:clamp(34px,8vw,52px);letter-spacing:-.015em;color:#f6ecdd;text-align:center;margin-bottom:28px}
+details{border-top:1px solid rgba(255,255,255,.09);padding:17px 2px}
+summary{cursor:pointer;font-size:16px;color:#f6ecdd;list-style:none;display:flex;justify-content:space-between;gap:16px}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";color:var(--spark);font-size:20px;line-height:1;transition:transform .3s}
+details[open] summary::after{transform:rotate(45deg)}
+details p{margin-top:10px;line-height:1.6;color:#c2af9b;font-size:14.5px}
+footer{max-width:640px;margin:70px auto 0;font-size:12px;color:#8f7f70;display:flex;flex-wrap:wrap;gap:8px 18px;justify-content:center}
+footer a{color:inherit;text-decoration:none}
+
+@media (min-width:900px){
+  #scene{height:60%}
+  .panel{top:96px}
+  #passwrap{top:200px;width:380px}
+  #chat{bottom:20%}
+  #top{padding:22px 32px 0}
+}
+@media (max-height:720px){
+  .panel{top:calc(62px + env(safe-area-inset-top))}
+  .panel h1{font-size:clamp(30px,8.4vw,52px)}.panel h2{font-size:clamp(28px,7.6vw,46px)}
+  .panel p{font-size:13.5px;margin-top:8px}.k{margin-bottom:9px}
+  .cta{margin-top:14px;padding:11px 18px 11px 20px;font-size:13px}.fine{margin-top:8px}
+  .promises{gap:6px;margin-top:12px}.promises li{font-size:12.5px}
+}
+
+/* hero notification card (dating cue on first screen) */
+#notify{position:absolute;z-index:7;display:flex;gap:9px;align-items:center;padding:10px 16px 10px 10px;border-radius:22px 22px 22px 6px;background:#fffaf3;
+ box-shadow:0 10px 24px -10px rgba(60,30,10,.45),0 1px 0 rgba(255,255,255,.9) inset;opacity:0;pointer-events:none;width:232px;max-width:calc(100vw - 24px);box-sizing:border-box}
+#notify .ntext{min-width:0;flex:1}#notify b,#notify small{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+#notify::after{content:'';position:absolute;left:14px;bottom:-9px;width:18px;height:12px;background:#fffaf3;clip-path:polygon(0 0,100% 0,8% 100%);filter:drop-shadow(0 3px 3px rgba(60,30,10,.18))}
+#notify b{display:block;font:600 13px AHSans;color:#2B1E12}#notify small{display:block;font:11px AHSans;color:#7d6855;margin-top:2px}
+.nheart{flex:0 0 28px;height:28px;display:grid;place-items:center}.nheart svg{width:26px;height:26px;filter:drop-shadow(0 2px 3px rgba(184,52,79,.35))}
+.ntext{transition:opacity .35s}
+/* couple cards (zoom-in moment) */
+#couple{position:absolute;inset:0;pointer-events:none;z-index:6}
+.pc{position:absolute;margin:0;width:clamp(96px,26vw,150px);padding:6px 6px 0;background:#fbf6ec;border-radius:4px;box-shadow:0 22px 40px -18px rgba(0,0,0,.7);opacity:0;will-change:transform,opacity}
+.pc img{display:block;width:100%;aspect-ratio:4/5;object-fit:cover;filter:sepia(.15) saturate(.92)}
+.pc figcaption{font:italic 13px AHSerif;color:#4a3626;text-align:center;padding:5px 0 7px}
+.pcspark{position:absolute;width:44px;height:44px;margin:-22px 0 0 -22px;opacity:0;filter:drop-shadow(0 0 14px rgba(255,190,90,.9))}
+/* combobox */
+.combo{position:relative}.combo input{padding-right:26px!important}
+.combo .clear{position:absolute;right:0;top:4px;width:24px;height:28px;border:0;background:none;color:#9a8470;font-size:18px;cursor:pointer}
+#tlist{position:absolute;left:-8px;right:-8px;top:calc(100% + 4px);z-index:20;margin:0;padding:6px;list-style:none;background:#fffaf1;border-radius:14px;box-shadow:0 18px 40px -12px rgba(40,20,10,.35);border:1px solid #eadfcd;max-height:224px;overflow:auto}
+#tlist li{padding:9px 10px;border-radius:9px;cursor:pointer;font:14px AHSans;color:#2B1E12;display:flex;justify-content:space-between;gap:10px}
+#tlist li small{color:#9a8470;font-size:11.5px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+#tlist li[aria-selected="true"],#tlist li:hover{background:#f1e5d2}
+#tlist li.other,#tlist li.add{color:#b5651d;font-weight:500}
+#tlist li.add{border-top:1px dashed #e3d3bc;margin-top:4px;padding-top:11px}
+/* friendly validation */
+.err{font:12px AHSans;color:#b5462e;min-height:0;display:none;margin-top:2px}.err.on{display:block}
+.row.bad input{border-bottom-color:#c7563c}
+.pass.shake{animation:shake .4s}
+@keyframes shake{20%{transform:translateX(-6px)}40%{transform:translateX(5px)}60%{transform:translateX(-3px)}80%{transform:translateX(2px)}}
+/* fit-to-screen pass */
+#passfit{transform-origin:50% 0}
+#passwrap{max-height:calc(100svh - 160px)}
+/* glass pop-up */
+#modal{position:fixed;inset:0;z-index:100;display:grid;place-items:center;padding:16px}
+#modal[hidden]{display:none}
+.mbg{position:absolute;inset:0;background:rgba(24,16,22,.38);backdrop-filter:blur(16px) saturate(1.1);-webkit-backdrop-filter:blur(16px) saturate(1.1);animation:fadein .35s}
+.mslot{position:relative;width:min(92vw,380px);animation:rise .45s cubic-bezier(.16,1,.3,1)}
+.mclose{position:absolute;top:calc(14px + env(safe-area-inset-top));right:16px;z-index:2;width:40px;height:40px;border-radius:50%;border:1px solid rgba(255,255,255,.3);background:rgba(255,255,255,.14);color:#fff;font-size:22px;cursor:pointer;backdrop-filter:blur(8px)}
+@keyframes fadein{from{opacity:0}}@keyframes rise{from{opacity:0;transform:translateY(24px) scale(.98)}}
+body.modal-open,body.share-open{overflow:hidden}
+@media (min-width:900px) and (max-height:820px){.pass .body{grid-template-columns:1fr 1fr;column-gap:18px}.pass .body .row:first-child,.pass .agree{grid-column:1/-1}}
+
+
+/* v3.2 pass: roomy, readable, dropdown never clipped */
+.pass{overflow:visible!important}
+.pass .band{border-radius:18px 18px 0 0}
+.pass::before{border-radius:18px}
+.pass .body{padding:22px 22px 18px!important;gap:20px!important;grid-template-columns:1fr!important}
+.row{gap:7px!important}
+.row label{font-size:10px!important;letter-spacing:.18em!important}
+.row input{font-size:16px!important;padding:9px 0 10px!important}
+.chips{gap:8px!important}.chips label{padding:9px 13px!important;font-size:13.5px!important}
+.note{margin-top:4px!important}
+.pass .foot{padding:14px 22px 18px!important}
+#tlist{z-index:50!important}
+.formerr{padding:0 22px;margin:-6px 0 4px}
+.agree a{color:inherit}
+#passwrap{width:min(92vw,420px)!important;overflow:visible;padding-bottom:12px;scrollbar-width:none}
+#passwrap.scrolls{overflow:auto;overscroll-behavior-y:auto;-webkit-overflow-scrolling:touch;touch-action:pan-y}
+#passwrap::-webkit-scrollbar{display:none}
+.mslot{width:min(92vw,420px)!important;max-height:calc(100svh - 32px);overflow:auto;overscroll-behavior:contain;scrollbar-width:none;padding:4px 0 12px}
+.mslot::-webkit-scrollbar{display:none}
+/* real frosted page behind the pop-up */
+body.modal-open #story,body.modal-open #faq,body.modal-open #top{filter:blur(14px) saturate(1.05);transition:filter .35s}
+#story,#faq,#top{transition:filter .35s}
+.mbg{background:rgba(24,16,22,.28)!important}
+/* desktop: heading left, pass right, both vertically centred */
+@media (min-width:900px){
+ .panel[data-s="7"]{left:9vw!important;width:min(34vw,460px)!important;transform:none!important;text-align:left;top:42%!important}
+ .panel[data-s="7"] h2{font-size:clamp(44px,5vw,72px)}
+ #passwrap{left:auto!important;right:9vw;top:50%!important;max-height:none!important;overflow:visible!important}
+}
+
+
+/* phones held sideways: text left, scene right (like desktop) */
+body.side #scene{left:46%;right:0;top:0;bottom:0;height:100%!important}
+body.side .panel{left:4vw;width:40vw;transform:none;text-align:left;top:62px}
+body.side .panel h1{font-size:clamp(24px,4.6vw,40px)}body.side .panel h2{font-size:clamp(22px,4.2vw,36px)}
+body.side .panel p{font-size:13px;margin-left:0}
+body.side .promises{margin-left:0}
+body.side #polas{left:46%}
+body.side .panel[data-s="7"]{top:50%;transform:translateY(-50%)}
+body.side #passwrap{left:auto;right:4vw;top:50%;width:min(52vw,420px)!important;max-height:calc(100svh - 70px)!important}
+body.side .ticker{margin-left:0;margin-right:-50vw}
+
+
+/* ---------- phones (portrait) only: desktop/laptop untouched ---------- */
+@media (max-width:899px) and (orientation:portrait){
+ #story{height:820vh}
+ .panel{width:90vw;top:calc(env(safe-area-inset-top) + max(122px, 16svh))}
+ .panel p{font-size:16px;line-height:1.6}
+ .promises{gap:12px;max-width:340px}
+ .promises li{font-size:14.5px;line-height:1.5}
+ .pola{width:clamp(78px,21vw,100px);padding:5px 5px 0}
+ .pola figcaption{white-space:normal;font-size:11px;line-height:1.2;padding:4px 1px 6px;overflow-wrap:anywhere}
+ .pola:nth-child(1){left:2%;top:0}
+ .pola:nth-child(2){left:auto;right:2%;top:8%}
+ .pola:nth-child(3){left:3%;top:34%}
+ #tick{font-size:clamp(26px,7.4vw,34px)}
+ #tick i{margin:0 .42em}
+ .pillbtn{min-height:40px}
+ .cta{min-height:46px}
+ .chips label{min-height:40px;display:inline-flex;align-items:center}
+ #top{padding-left:max(18px,env(safe-area-inset-left));padding-right:max(18px,env(safe-area-inset-right))}
+}
+@media (max-width:899px) and (orientation:portrait) and (max-height:720px){
+ .panel{top:calc(env(safe-area-inset-top) + max(100px, 14svh))}
+ .panel p{font-size:13.5px;line-height:1.5;margin-top:8px}
+ .promises{gap:7px}.promises li{font-size:12.5px;line-height:1.4}
+}
+
+
+/* phones: pass in normal page flow (no inner scrolling), polaroids spaced by real height */
+#joinsec{display:none}
+@media (max-width:899px) and (orientation:portrait){
+ #joinsec{display:block;background:var(--night);padding:8px 0 40px}
+ #joinsec .jinner{width:min(92vw,420px);margin:0 auto}
+ .jtap{position:absolute;inset:0;z-index:5;background:transparent;border:0;padding:0;cursor:pointer;-webkit-tap-highlight-color:transparent}
+ #passfit:has(.joined) ~ .jtap,.joined ~ .jtap{display:none}
+ body:not(.modal-open) #passwrap{display:none}
+ .pola:nth-child(3){top:calc(var(--pola1h,130px) + 14px)}
+}
+
+
+/* header turns frosted once the story is over (content slides under it) */
+#top{transition:background .35s,backdrop-filter .35s}
+#top.solid{background:rgba(22,17,27,.78);backdrop-filter:blur(14px) saturate(1.1);-webkit-backdrop-filter:blur(14px) saturate(1.1);padding-bottom:12px;--text:#f6ecdd;--text2:#c2af9b}
+#top.solid #brand,#top.solid #clock{color:#f6ecdd}
+#top.solid .pillbtn{background:rgba(255,255,255,.1);color:#f6ecdd;border-color:rgba(255,255,255,.16)}
+@media (max-width:899px) and (orientation:portrait){
+ .panel[data-s="7"]{display:none}
+ #joinsec{padding-top:calc(72px + env(safe-area-inset-top))}
+ #joinsec .jhead{text-align:center;margin:0 auto 10px;width:90vw}
+ #joinsec .jhead .k{font:500 10.5px AHSans;letter-spacing:.22em;text-transform:uppercase;color:#c2af9b;margin-bottom:10px}
+ #joinsec .jhead h2{font-family:AHSerif;font-weight:400;font-size:clamp(34px,9vw,46px);color:#f6ecdd;letter-spacing:-.015em;line-height:1.02}
+}
+
+@media (max-width:460px){#clock .city{display:none}.pillbtn{padding:8px 12px;font-size:12px;white-space:nowrap}#clock{white-space:nowrap}}
+@media (prefers-reduced-motion:reduce){.joined .stamp{animation-duration:.01s}}
+</style>
+</head>
+<body>
+<header id="top">
+ <div id="brand"><svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="16" fill="none" stroke="currentColor" stroke-width="3"/><path d="M11 28a13.4 13.4 0 0 1 26 0z" fill="#E9A93B"/><path d="M4.5 28.9h39" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"/></svg>afterhours</div>
+ <div class="right"><span id="clock">6:58 PM in Bengaluru</span><a class="pillbtn" href="#" data-join>Join waitlist <svg width="10" height="10" viewBox="0 0 10 10"><path d="M2 8 8 2M3.5 2H8v4.5" fill="none" stroke="currentColor" stroke-width="1.4"/></svg></a></div>
+</header>
+
+<section id="story" aria-label="How afterhours works, told as one evening at a Bengaluru tech park">
+ <div id="stage">
+  <div id="nightsky"></div>
+  <div id="stars"></div>
+  <canvas id="bokeh" aria-hidden="true"></canvas>
+  <div id="scene"><canvas id="gl"></canvas></div>
+  <div id="polas" aria-hidden="true">
+   <figure class="pola" style="--r:-7deg"><img src="assets/photos/coffee-hands.webp" alt=""><figcaption>two coffees, one table</figcaption></figure>
+   <figure class="pola" style="--r:5deg"><img src="assets/photos/hands-reach.webp" alt=""><figcaption>same lift, 9:10 am</figcaption></figure>
+   <figure class="pola" style="--r:-3deg"><img src="assets/photos/couple-lights.webp" alt=""><figcaption>the long way home</figcaption></figure>
+  </div>
+
+  <div id="notify" aria-hidden="true"><span class="nheart"><svg viewBox="0 0 48 48" aria-hidden="true"><defs><linearGradient id="hg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffb3a7"/><stop offset=".55" stop-color="#e9677a"/><stop offset="1" stop-color="#b8344f"/></linearGradient><radialGradient id="hs" cx=".32" cy=".26" r=".5"><stop offset="0" stop-color="#fff" stop-opacity=".95"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></radialGradient></defs><path d="M24 42s-16-9.6-16-21.6C8 14 12.4 9.6 17.8 9.6c2.8 0 4.9 1.3 6.2 3.3 1.3-2 3.4-3.3 6.2-3.3C35.6 9.6 40 14 40 20.4 40 32.4 24 42 24 42z" fill="url(#hg)"/><path d="M24 42s-16-9.6-16-21.6C8 14 12.4 9.6 17.8 9.6c2.8 0 4.9 1.3 6.2 3.3 1.3-2 3.4-3.3 6.2-3.3C35.6 9.6 40 14 40 20.4 40 32.4 24 42 24 42z" fill="none" stroke="rgba(255,255,255,.55)" stroke-width="1.2"/><ellipse cx="17" cy="17" rx="6" ry="4" fill="url(#hs)" transform="rotate(-25 17 17)"/></svg></span><span class="ntext"><b>Someone's thinking of you</b><small>afterhours · just now</small></span></div>
+  <div id="couple" aria-hidden="true">
+   <figure class="pc" id="pcA"><img src="assets/photos/couple-lights.webp" alt="" style="object-position:26% 45%"><figcaption>4th floor</figcaption></figure>
+   <figure class="pc" id="pcB"><img src="assets/photos/laugh-hidden.webp" alt="" style="object-position:50% 35%"><figcaption>9th floor</figcaption></figure>
+   <div class="pcspark"><svg viewBox="0 0 24 24"><path d="M12 1.5c.6 4.6 2.5 7.4 10.5 10.5-8 3.1-9.9 5.9-10.5 10.5-.6-4.6-2.5-7.4-10.5-10.5 8-3.1 9.9-5.9 10.5-10.5z" fill="url(#sg)"/><defs><radialGradient id="sg" cx=".38" cy=".3" r=".8"><stop offset="0" stop-color="#fff"/><stop offset=".3" stop-color="#ffe2a0"/><stop offset=".8" stop-color="#e9a93b"/><stop offset="1" stop-color="#a8641b"/></radialGradient></defs></svg></div>
+  </div>
+  <div id="chat" aria-hidden="true">
+   <div class="timer">23h 59m left</div>
+   <div class="bub them">wait… it's actually you??</div>
+   <div class="bub me">i was literally hoping it'd be you 🥹</div>
+  </div>
+
+  <div class="panel" data-s="0">
+   <h1 class="serif">The app you ain't supposed<br>to <i>talk about.</i></h1>
+   <p>For the person you keep noticing at work. Tell them, without ever having to say it out loud.</p>
+   <div><a class="cta" href="#" data-join>Join the waitlist <svg viewBox="0 0 10 10"><path d="M2 8 8 2M3.5 2H8v4.5" fill="none" stroke="currentColor" stroke-width="1.4"/></svg></a></div>
+   <div id="hint">Scroll ↓</div>
+  </div>
+  <div class="panel" data-s="1">
+   <div class="k">7:15 PM · Office hours are over</div>
+   <h2 class="serif">You know <i>exactly</i> who.</h2>
+   <p>You've never really talked. But you'd notice if they weren't in on Monday.</p>
+  </div>
+  <div class="panel" data-s="2">
+   <div class="k">01 · Spark them</div>
+   <h2 class="serif">Spark <i>them.</i></h2>
+   <p>Their name, where they work. That's it. They'll only know someone is thinking of them. <b>Never who.</b></p>
+  </div>
+  <div class="panel" data-s="3">
+   <div class="k">02 · If they Spark you too</div>
+   <h2 class="serif">It's <i>mutual.</i></h2>
+   <p>Only then do you both find out. <b>No one is ever turned down.</b> If it isn't mutual, it simply never happened.</p>
+  </div>
+  <div class="panel" data-s="4">
+   <div class="k">03 · Say hi</div>
+   <h2 class="serif">Say <i>hi.</i></h2>
+   <p>A private chat, open for 24 hours. Enough time to say what you've been meaning to.</p>
+  </div>
+  <div class="panel" data-s="5">
+   <div class="k">9:00 PM · Privacy first</div>
+   <h2 class="serif">What happens here <i>stays here.</i></h2>
+   <ul class="promises">
+    <li><span><b>No profile lookups.</b> Nobody can search for you.</span></li>
+    <li><span><b>Every member is verified.</b> Real face, real workplace. No bots, no fake profiles.</span></li>
+    <li><span><b>LinkedIn only confirms it's you.</b> We never post anything.</span></li>
+    <li><span><b>Your company never hears from us.</b></span></li>
+    <li><span><b>No Sparks in your reporting line.</b> It's a promise every member makes.</span></li>
+   </ul>
+  </div>
+  <div class="panel" data-s="6">
+   <div class="k">Bengaluru, after hours</div>
+   <h2 class="serif">Coming to <i>Bengaluru</i> soon.</h2>
+   <p>From Manyata to ITPL. The waitlist gets in first.</p>
+   <div class="ticker" aria-label="Tech parks"><div id="tick">Manyata Tech Park<i>·</i>Bagmane Tech Park<i>·</i>Embassy TechVillage<i>·</i>RMZ Ecospace<i>·</i>ITPL<i>·</i>Prestige Tech Park<i>·</i>Global Village Tech Park<i>·</i>HustleHub Tech Park<i>·</i>Brigade Tech Gardens<i>·</i>Divyasree Technopolis</div></div>
+  </div>
+  <div class="panel" data-s="7">
+   <div class="k">Your after-hours pass</div>
+   <h2 class="serif">Be first <i>in.</i></h2>
+  </div>
+
+  <div id="passwrap">
+   <div id="passfit">
+   <svg class="lanyard" viewBox="0 0 64 56" aria-hidden="true"><path d="M14 0 L26 44 M50 0 L38 44" stroke="#8a5a2e" stroke-width="7" stroke-linecap="round"/><rect x="22" y="38" width="20" height="16" rx="3" fill="#c9b49a"/></svg>
+   <form class="pass" id="pass" novalidate>
+    <div class="slot"></div>
+    <div class="band"><b>afterhours</b><span>After-hours pass</span></div>
+    <div class="body">
+     <div class="row"><label for="e">Email</label><input id="e" type="email" placeholder="you@gmail.com" autocomplete="email" inputmode="email">
+      <div class="note"><svg viewBox="0 0 24 24" fill="none" stroke="#b5651d" stroke-width="2.2"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg>Personal email, please. Never your work one. Your office never hears about us from us.</div><div class="err" data-for="e"></div></div>
+     <div class="row"><label for="t">Tech park</label>
+      <div class="combo"><input id="t" role="combobox" aria-expanded="false" aria-controls="tlist" aria-autocomplete="list" autocomplete="off" placeholder="Search your tech park"><button type="button" class="clear" aria-label="Clear" hidden>×</button>
+       <ul id="tlist" role="listbox" hidden></ul></div><div class="err" data-for="t"></div></div>
+     <div class="row"><label>I am</label><div class="chips">
+      <label><input type="radio" name="g" value="man">A man</label><label><input type="radio" name="g" value="woman">A woman</label><label><input type="radio" name="g" value="non_binary">Non-binary</label><label><input type="radio" name="g" value="self">Self-describe</label></div><div class="err" data-for="g"></div></div>
+     <div class="row"><label for="c">Company <span style="letter-spacing:0;text-transform:none">· optional</span></label><input id="c" placeholder="Where you're employed"></div>
+     <label class="agree"><input type="checkbox" id="age"><span>I'm 18 or older and agree to the <a href="privacy.html" target="_blank" rel="noopener">Privacy Policy</a>.</span></label><div class="err" data-for="age"></div>
+    </div>
+    <div class="formerr err" role="alert"></div><div class="foot"><div class="barcode" aria-hidden="true"></div><button class="cta" type="submit">Get my pass <svg viewBox="0 0 10 10"><path d="M2 8 8 2M3.5 2H8v4.5" fill="none" stroke="currentColor" stroke-width="1.4"/></svg></button></div>
+    <div class="stamp" aria-hidden="true"><span>Waitlist<b>You're in.</b><small>see you<br>after hours</small></span></div>
+   </form>
+   <div id="after-join">One email when we open, nothing else.<br><a class="cta" href="#" data-share style="margin-top:14px">Share afterhours</a></div>
+   </div>
+  </div>
+  <div id="paper"></div>
+ </div>
+</section>
+
+<div id="modal" role="dialog" aria-modal="true" aria-label="Join the afterhours waitlist" hidden><div class="mbg"></div><button type="button" class="mclose" aria-label="Close">×</button><div class="mslot"></div></div>
+<div id="sharepop" role="dialog" aria-modal="true" aria-labelledby="sp-h" hidden><div class="card">
+ <button type="button" class="x" data-spclose aria-label="Close">×</button>
+ <div class="emo" aria-hidden="true">👀</div>
+ <h4 id="sp-h">Now send it <i>around.</i></h4>
+ <p>Your crush won't join an app nobody's heard of.</p>
+ <button type="button" class="sbtn main" data-share>Share afterhours <svg width="12" height="12" viewBox="0 0 10 10" aria-hidden="true"><path d="M2 8 8 2M3.5 2H8v4.5" fill="none" stroke="currentColor" stroke-width="1.4"/></svg></button>
+ <div class="row2"><a class="sbtn" data-wa href="#" target="_blank" rel="noopener">WhatsApp</a><button type="button" class="sbtn" data-copy>Copy link</button></div>
+ <button type="button" class="later" data-spclose>Maybe later</button>
+</div></div>
+<section id="joinsec" aria-label="Join the waitlist"><div class="jhead"><div class="k">Your after-hours pass</div><h2 class="serif">Be first <i>in.</i></h2></div><div class="jinner"></div></section>
+<section id="faq">
+ <div class="inner">
+  <h3>Questions, <i>quietly</i> answered.</h3>
+  <details><summary>Is it really anonymous?</summary><p>Until it's mutual, yes. Nobody learns you Sparked them unless they Spark you too. We can't stop people guessing, but we never give it away.</p></details>
+  <details><summary>What if my manager is on it?</summary><p>They might be. But nobody can browse, so they'd never see you unless you both Spark each other. And there's one promise every member makes: no Sparks up or down your reporting line. Managers and their teams are off-limits, both ways.</p></details>
+  <details><summary>Why LinkedIn?</summary><p>To keep it real. Only verified professionals get in, and we check the workplace badge by hand. We never post anything.</p></details>
+  <details><summary>Is it free?</summary><p>Yes. Joining and using afterhours is free.</p></details>
+  <details><summary>When does it open?</summary><p>Very soon, starting with Bengaluru's tech parks. Join the waitlist and we'll email you the moment we open near you.</p></details>
+  <footer><span>afterhours · Made in Bengaluru ❤️</span><a href="blog/">Blog</a><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a><a href="guidelines.html">Guidelines</a><a href="mailto:support@tryafterhours.app">support@tryafterhours.app</a></footer>
+ </div>
+</section>
+
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
+<script src="config.js"></script>
+<script src="story3.js"></script>
+<script src="story3-ui.js"></script>
+<script type="importmap">{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.js","three/addons/":"https://cdn.jsdelivr.net/npm/three@0.170.0/examples/jsm/"}}</script>
+<script type="module" src="story3-scene.js"></script>
+</body>
+</html>

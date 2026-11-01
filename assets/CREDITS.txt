@@ -1,0 +1,4 @@
+Poly Haven assets are CC0 (public domain): the_sky_is_on_fire, satara_night_no_lamps (HDRI), asphalt_02 (texture). https://polyhaven.com/license
+
+Photos (Unsplash License, free for commercial use): hands-reach (unsplash.com/photos/1604881991405-b273c7a4386a), coffee-hands, couple-lights. Sources in prototype/img/SOURCES.json.
+laugh-hidden, couple-lights (Unsplash License).
