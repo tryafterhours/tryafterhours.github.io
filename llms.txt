@@ -1,0 +1,20 @@
+# afterhours
+
+> A private dating app for working professionals in India, for the person you keep noticing at work or around your tech park. Nobody finds out unless it's mutual.
+
+- Who it's for: working professionals across India, 18+.
+- Status: coming soon. Join the waitlist at https://tryafterhours.app
+- Privacy: we never share your data with your employer. Personal email only.
+- Contact: support@tryafterhours.app
+
+## Pages
+- [Home and waitlist](https://tryafterhours.app/)
+- [Privacy Policy](https://tryafterhours.app/privacy.html)
+- [Terms of Use](https://tryafterhours.app/terms.html)
+- [Community Guidelines](https://tryafterhours.app/guidelines.html)
+
+## Blog
+- [How to ask out a coworker without making it awkward](https://tryafterhours.app/ask-out-coworker/)
+- [Best dating apps for working professionals in India (2026)](https://tryafterhours.app/best-dating-apps-working-professionals-india/)
+- [Is office dating allowed in India? Workplace dating, the law and HR policies](https://tryafterhours.app/office-dating-india/)
+- [Dating in Bengaluru's tech parks](https://tryafterhours.app/tech-park-dating-bengaluru/)
